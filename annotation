@@ -18,5 +18,42 @@ ceval.c-> the main loop of the python compiler
 
 
 
-ceval.c
+#=============ceval.c=================+#
+
+
+#------------abstract.c----------------#
+defination of function : PyObject_CallFunctionObjArgs()
+PyObject *
+PyObject_CallFunctionObjArgs(PyObject *callable, ...)
+{
+
+line ---> 2758 (python27)
+
+
+PyObject_CallFunctionObjArgs -- > PyObject_Call --->	
+
+
+
+##--end of functionPyObject_CallFunctionObjArgs --
+
+
+
+
+
+
+#---------object.h=-------------------#
+
+--1
+ternary 
+tp_call - > typedef PyObject * (*ternaryfunc)(PyObject *, PyObject *, PyObject *);
+
+
+--2
+
+definition of pyobject :
+
+typedef struct _object {
+    PyObject_HEAD
+} PyObject;
+
 
