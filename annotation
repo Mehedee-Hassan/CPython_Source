@@ -1,0 +1,22 @@
+long object.c
+110 
+
+
+the mapping of addition function:
+
+ceval.c-> the main loop of the python compiler
+ |
+ V
+ BINARY_OP_ADD_INT TARGET(BINARY_OP_ADD_INT)-> add the top two value in the stack
+   |
+	 V
+	 longobject.c
+	 	|
+	 	V
+	 	__long_add() -> x_add() -> while loop of c and returns carry
+
+
+
+
+ceval.c
+
